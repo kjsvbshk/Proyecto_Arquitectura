@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Acount | Noka</title>
+    <link rel="stylesheet" href="./public/static/styles_registro.css">
+    <script type="module" src="./firebase/firebase-config.js"></script>
+    <script type="module" src="./js/register/register.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="login-modal">
+            <div class="login-form">
+                <div class="login-content">
+                    <h1 class="title">Crear una nueva cuenta</h1>
+                    <form id="formulario-crear">
+                        <!-- Usuario -->
+                        <div class="email-input">
+                            <label class="input-title" for="username">Nombre de Usuario</label>
+                            <input class="input" type="text" id="username" name="username"
+                                placeholder="Nombre de Usuario" required>
+                        </div>
+                        <!-- Correo -->
+                        <div class="email-input">
+                            <label class="input-title" for="email">Correo Electrónico</label>
+                            <input class="input" type="email" id="email" name="email" placeholder="Correo Electrónico"
+                                required>
+                        </div>
+                        <!-- Contraseña -->
+                        <div class="password-input">
+                            <label class="input-title" for="password">Contraseña</label>
+                            <input class="input" type="password" id="password" name="password" placeholder="Contraseña"
+                                required>
+                        </div>
+                        <!-- Selección de roles -->
+                        <div class="email-input">
+                            <label class="input-title" for="role">Selecciona tu rol</label>
+                            <select class="input" id="role" name="role" placeholder="Rol" required>
+                                <option value="Usuario">Usuario</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+
+                        <input class="btn btn-primary" type="submit" id="btn-signup" value="Registrarse">
+                    </form>
+                    <div class="login-footer">
+                        <a href="index.html">¡Ya tengo una cuenta!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image">
+                <img src="public/static/images/logo_isotipo.png" alt="Logo" width="650" height="650">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/static/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <script type="module" src="./firebase/firebase-config.js"></script>
+    <title>Login Page | Noke</title>
+</head>
+
+<body>
+    <section>
+        <div class="login-modal">
+            <div class="login-form">
+                <div class="login-content">
+                    <h1 class="title">¡Bienvenido de nuevo!</h1>
+                    <h3 class="subtitle">Por favor, ingresa tus datos.</h3>
+                    <form id="formulario-sesion">
+                        <div class="email-input">
+                            <span class="input-title">Correo Electrónico</span>
+                            <input class="input" type="email" id="email" name="email" placeholder="Ingresa tu correo"
+                                required />
+                        </div>
+                        <div class="password-input">
+                            <span class="input-title">Contraseña</span>
+                            <input class="input" type="password" id="password" name="password" placeholder="********"
+                                required />
+                        </div>
+                        <div class="recovery">
+                            <div class="remember">
+                                <input type="checkbox" id="check" />
+                                <label for="check">Recordarme</label>
+                            </div>
+                            <div class="forgot">
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </div>
+                        <button type="submit" id="btn-login" class="btn btn-primary">Iniciar sesión</button>
+                    </form>
+                    <button class="btn btn-secondary">
+                        <img src="public/static/images/icon-google.png" alt="Iniciar sesión con Google" />Iniciar sesión con Google
+                    </button>
+                    <div class="login-footer">
+                        ¿No tienes una cuenta?<a href="register.html">Regístrate gratis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image">
+                <img src="public/static/images/logo_isotipo.png" alt="logo_isotipo" width="650" height="650"/>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="./js/login/login.js"></script>
+</body>
+
+</html>
