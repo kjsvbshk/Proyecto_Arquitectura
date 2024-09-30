@@ -4,9 +4,9 @@ import { auth } from "../../firebase/firebase-config";
 import { onLogin } from "../../utils/firebase";
 
 onAuthStateChanged(auth, (user) => {
-  if(user) {
+  if (user) {
     console.log("Existe sesion")
-    window.location.href = "./dashboard.html"
+    window.location.href = "./main.html"
   } else {
     console.log("No existe sesion")
   }

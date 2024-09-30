@@ -1,15 +1,15 @@
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase/firebase-config"
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, setPersistence, browserLocalPersistence } from "firebase/auth"
 
 export const onRegister = async (email, password, role, username) => {
     try {
 
-        const response = await onRegisterUserDoc(email, role, username)
+        const Userresponse = await onRegisterUserDoc(email, role, username)
 
-        if (response) {
-            const response = await createUserWithEmailAndPassword(auth, email, password)
-            const user = response.user;
+        if (Userresponse) {
+            const authresponse = await createUserWithEmailAndPassword(auth, email, password)
+            const user = authresponse.user;
 
             console.log(user)
             alert("Usuario Creado Correctamente seras redirigido a la pagina principal");
@@ -41,6 +41,17 @@ export const onLogout = async () => {
         console.log(error)
     }
 }
+
+export const configurePersistence = () =>{
+    setPersistence(auth, browserLocalPersistence)
+    .then(()=>{
+        console.log("Configuracion de persistencia exitosa");
+    })
+    .catch((error)=>{
+        console.error("Error al configurar la persistencia en la sesion", error);
+    });
+}
+
 
 const onRegisterUserDoc = async (email, role, username) => {
     try {

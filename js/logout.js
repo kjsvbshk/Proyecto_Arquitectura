@@ -7,6 +7,6 @@ onAuthStateChanged(auth, (user) => {
     window.location.href = "../../index.html";
   }
 })
-document.getElementById("logoutButton").addEventListener("click", () => {
+document.getElementById("register-button").addEventListener("click", () => {
   onLogout()
 });

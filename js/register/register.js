@@ -5,7 +5,7 @@ import { onRegister } from "../../utils/firebase";
 onAuthStateChanged(auth, (user) => {
   if (user) {
     alert
-    window.location.href = "./dashboard.html"
+    window.location.href = "../../index.html"
   }
 })
 
