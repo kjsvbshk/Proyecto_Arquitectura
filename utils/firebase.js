@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase/firebase-config"
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, setPersistence, browserLocalPersistence } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut, setPersistence, browserLocalPersistence } from "firebase/auth"
 
 export const onRegister = async (email, password, role, username) => {
     try {
@@ -20,6 +20,7 @@ export const onRegister = async (email, password, role, username) => {
     }
 }
 
+// Inicio de sesion con correo  y contrasena
 export const onLogin = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password)
@@ -30,6 +31,24 @@ export const onLogin = async (email, password) => {
         console.log(error)
     }
 }
+
+// Inicio de sesion con Google
+export const signInWithGoogle = async ()=> {
+    const provider = new GoogleAuthProvider();
+
+    try{
+        const result = await signInWithPopup(auth,provider);
+        const user = result.user;
+        console.log("Se inicio correctamente sesion con Google", user);
+
+        alert("Inicio se sesion con Google exitoso");
+
+    }catch (error){
+        console.error("Error al inciar sesion con Google",error.message);
+        alert("Error al inciar sesion con Google: "+ error.message);
+        return null;
+    }
+};
 
 export const onLogout = async () => {
     try {
