@@ -10,3 +10,5 @@ configurePersistence();
 //         alert("No has iniciado sesion")
 //     } 
 // })
+
+console.log("holassss")
