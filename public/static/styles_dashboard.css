@@ -186,6 +186,7 @@ section ul {
 
 /* Sección: Impacto */
 #impacto {
+    text-align: center;
     background-color: #f5f8fa;
     padding: 50px 20px;
     border-radius: 10px;
@@ -396,4 +397,13 @@ nav {
 main {
     margin-top: 100px;
     /* Ajusta según la altura de tu header */
+}
+
+/* mapa */
+#map{
+    height: 500px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0,1);
+    margin: 20px auto;
 }
