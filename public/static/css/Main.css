@@ -1,24 +1,55 @@
-/* style.css */
-
+/* General Styles */
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
     align-items: center;
-    background: #FDFC47;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2469fe,#fef324, #fd4747);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3173ff,#fbff2d, #ff3434); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content: center;
 }
 
 
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #206A01;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#headerTitle {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: white;
+    margin: 0 20px;
+}
+
+.iconHeader {
+    width: 80px;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+}
 #contenedor {
     text-align: center;
     max-width: 1200px; /* Establecer un ancho máximo para el contenedor */
@@ -68,4 +99,37 @@ body {
     max-height: 700px; /* Establecer una altura máxima para la caja 5 */
     background-color: #efeecb00; /* Cambiar el color de fondo de la caja 5 */
     border: rgba(0, 0, 0, 0) 5px inset;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-image {
+    width: 300px;
+    border-radius: 15px;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+
+.auth-button {
+    background-color: #206A01;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: #4CAF50;
 }

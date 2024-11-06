@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./public/static/styles_admin.css">
+    <meta charset="UTF-8">
+    <title>Revisión de Solicitudes</title>
+    <script src="../../firebase/firebase-config.js"></script>
+    
+</head>
+<body>
+    <h2>Solicitudes de Oradores</h2>
+    <table id="requests-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo Electrónico</th>
+                <th>Historia</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las solicitudes se cargarán aquí dinámicamente -->
+        </tbody>
+    </table>
+</body>
+<script>
+    // Cargar solicitudes desde Firestore
+    async function loadRequests() {
+        const querySnapshot = await firebase.getDocs(firebase.collection(db, 'requests'));
+        const tableBody = document.getElementById('requests-table').querySelector('tbody');
+        tableBody.innerHTML = '';  // Limpiar la tabla
+
+        querySnapshot.forEach(doc => {
+            const data = doc.data();
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${data.name}</td>
+                <td>${data.email}</td>
+                <td>${data.story}</td>
+                <td>${data.status}</td>
+                <td>
+                    <button onclick="updateStatus('${doc.id}', 'aprobado')">Aprobar</button>
+                    <button onclick="updateStatus('${doc.id}', 'rechazado')">Rechazar</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Función para actualizar el estado de la solicitud
+    async function updateStatus(id, status) {
+        await firebase.updateDoc(firebase.doc(db, 'requests', id), {
+            status: status
+        });
+        loadRequests();  // Recargar las solicitudes después de actualizar el estado
+    }
+
+    // Autenticación básica para verificar que el usuario es administrador
+    firebase.onAuthStateChanged(auth, user => {
+        if (user) {
+            // Puedes verificar el rol del usuario (por ejemplo, un campo "role" en Firestore)
+            loadRequests();
+        } else {
+            alert('No tienes acceso a esta página');
+            window.location.href = 'index.html';  // Redirige si no está autenticado
+        }
+    });
+</script>
+</html>

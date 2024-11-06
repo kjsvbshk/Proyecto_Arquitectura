@@ -1,0 +1,153 @@
+/* Estilos base */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header y Barra de navegación */
+.w3-top {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ff5a5f;
+}
+
+.w3-bar {
+    background-color: #ff5a5f;
+    color: white;
+}
+
+.w3-bar .w3-button {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.w3-bar .w3-button:hover {
+    background-color: #ff5a5f;
+    color: white;
+}
+
+.logout-button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ff5a5f;
+}
+
+/* Banner principal */
+#banner-principal {
+    padding: 128px 16px;
+    background-color: #ff5a5f;
+    text-align: center;
+    color: white;
+}
+
+#banner-principal h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+#banner-principal p {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+/* Secciones */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Formularios */
+form.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-section {
+    margin: 10px 0;
+}
+
+form .form-section label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-section input,
+form .form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form .form-section input:focus,
+form .form-section textarea:focus {
+    border-color: #ff5a5f;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ff5a5f;
+}
+
+/* PayPal Button Container */
+#paypal-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #003f66;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.w3-bar-item.w3-button.w3-hover-white:hover {
+    color: black;
+}

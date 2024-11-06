@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase/firebase-config";
-import { configurePersistence } from "../utils/firebase";
+import { auth } from "../../firebase/firebase-config";
+import { configurePersistence } from "../../utils/firebase";
 
 configurePersistence();
 

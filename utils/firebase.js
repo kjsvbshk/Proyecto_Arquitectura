@@ -20,6 +20,28 @@ export const onRegister = async (email, password, role, username) => {
     }
 }
 
+export const sendForm = async(nombre,historia,tema,estado)=>{
+    try{
+
+
+        await addDoc(collection(db,"solicitudes-oradores"),{
+            nombre: nombre,
+            historia: historia,
+            tema: tema,
+            estado: "pendiente" //estado por default
+        });
+
+        return true
+        
+    } catch (error){
+        console.error("Se peto esta monda: ", error);
+        alert("uy algo salio mal, intentalo otra vez. :)");
+
+        return false
+    }
+    
+}
+
 // Inicio de sesion con correo  y contrasena
 export const onLogin = async (email, password) => {
     try {
@@ -70,6 +92,7 @@ export const configurePersistence = () =>{
         console.error("Error al configurar la persistencia en la sesion", error);
     });
 }
+
 
 
 const onRegisterUserDoc = async (email, role, username) => {

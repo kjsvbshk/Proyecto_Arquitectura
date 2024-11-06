@@ -1,0 +1,82 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Encabezado */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Botones */
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:nth-child(1) {
+    background-color: #27ae60; /* Verde para aprobar */
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #e74c3c; /* Rojo para rechazar */
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        margin: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

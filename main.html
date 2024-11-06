@@ -2,165 +2,108 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CommunityCare</title>
-    <link rel="stylesheet" href="./public/static/styles_main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/static/css/styles_main.css">
     <script type="module" src="./js/logout.js"></script>
 </head>
 
 <body>
-    <!-- Ancla para Inicio -->
-    <div id="inicio"></div>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-left-align w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Inicio</a>
+            <a href="#descripcion"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Descripción</a>
+            <a href="#unete" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Únete y
+                Cuéntanos</a>
+            <a href="#videoconferencias"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Videoconferencias</a>
+            <a href="#donaciones"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Donaciones</a>
+            <button id="logout-button" class="w3-bar-item w3-button w3-right w3-padding-large logout-button">Cerrar
+                Sesión</button>
+        </div>
+    </div>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#quienes-somos">Quiénes somos</a></li>
-                <li><a href="#impacto">Impacto</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#aprender">Aprender</a></li>
-                <li><a href="#involucrate">Involúcrate</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <button class="register-button" type="submit" id="register-button">Cerrar Sesion</button>
-            </div>
-        </nav>
+    <!-- Banner -->
+    <header class="w3-container w3-center" id="banner-principal">
+        <h1 class="w3-margin w3-jumbo">Bienvenidos a CommunityCare</h1>
+        <p class="w3-xlarge">Conectando voluntarios con comunidades necesitadas para mejorar la salud preventiva.</p>
     </header>
 
-    <!-- Banner principal -->
-    <section id="banner-principal">
-        <div class="banner-content">
-            <h1>Bienvenidos a CommunityCare</h1>
-            <p>Conectamos a voluntarios con comunidades que necesitan apoyo para mejorar su salud preventiva.</p>
-            <a href="#quienes-somos" class="cta-button">Conoce más</a>
+    <!-- Descripción -->
+    <section id="descripcion" class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h2>Descripción</h2>
+            <p class="w3-text-grey">CommunityCare es una plataforma que conecta voluntarios con comunidades vulnerables,
+                facilitando el acceso a recursos y servicios de salud preventiva. A través de programas educativos y
+                apoyo en salud, buscamos construir una comunidad más fuerte y saludable.</p>
         </div>
     </section>
 
-    <main>
-        <!-- Sección: Nuestra Misión -->
-        <section id="quienes-somos">
-            <h2>Nuestra Misión</h2>
-            <p>En CommunityCare, creemos en la importancia de la salud preventiva para construir comunidades fuertes y
-                resilientes. Facilitamos el acceso a cuidados preventivos a través de programas educativos y la conexión
-                entre voluntarios y las comunidades más vulnerables.</p>
-
-            <h3>Objetivos de la Iniciativa</h3>
-            <p>Nuestros principales objetivos son:</p>
-            <ul>
-                <li>Promover la salud preventiva a través de programas educativos.</li>
-                <li>Conectar a voluntarios con comunidades necesitadas.</li>
-                <li>Fortalecer el acceso a recursos de salud en áreas vulnerables.</li>
-                <li>Fomentar la participación comunitaria en el cuidado de la salud.</li>
-            </ul>
-
-            <h3>Conoce a los Creadores</h3>
-            <div class="team-container">
-                <div class="team-member">
-                    <h4>Dr. Ana López</h4>
-                    <p><strong>Cargo:</strong> Fundadora y Directora Ejecutiva</p>
-                    <p>La Dra. Ana López es una médico especializada en salud pública con más de 15 años de experiencia
-                        en el sector. Ha trabajado en diversas iniciativas de salud en América Latina y se ha
-                        comprometido a mejorar el acceso a servicios de salud en comunidades vulnerables.</p>
+    <!-- Únete y Cuéntanos -->
+    <section id="unete" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h2>Únete y Cuéntanos</h2>
+            <p class="w3-text-grey">Comparte tu historia y únete como orador en nuestras videoconferencias para apoyar
+                nuestra causa.</p>
+            <form class="form-container" id="formulario-unete">
+                <div class="form-section">
+                    <label>Nombre:</label>
+                    <input type="text" required name="name" placeholder="Tu nombre" id="nombre">
                 </div>
-                <div class="team-member">
-                    <h4>Ing. Carlos Méndez</h4>
-                    <p><strong>Cargo:</strong> Coordinador de Proyectos</p>
-                    <p>El Ing. Carlos Méndez es un ingeniero social que ha liderado múltiples proyectos de desarrollo
-                        comunitario. Su enfoque se centra en la creación de soluciones innovadoras para facilitar el
-                        acceso a la salud y la educación en comunidades desfavorecidas.</p>
+                <div class="form-section">
+                    <label>Tu Historia:</label>
+                    <textarea required name="story" rows="4" placeholder="Escribe aquí tu historia" id="historia"></textarea>
                 </div>
-                <div class="team-member">
-                    <h4>Lic. María Pérez</h4>
-                    <p><strong>Cargo:</strong> Especialista en Comunicación y Sensibilización</p>
-                    <p>La Lic. María Pérez tiene una amplia trayectoria en comunicación social y sensibilización en
-                        temas de salud. Su trabajo consiste en crear campañas efectivas que informen y eduquen a las
-                        comunidades sobre la salud preventiva y el bienestar.</p>
+                <div class="form-section">
+                    <label>Propuesta de Tema:</label>
+                    <input type="text" required name="topic" placeholder="Tema de la charla" id="tema">
                 </div>
-                <div class="team-member">
-                    <h4>Dr. Javier Gómez</h4>
-                    <p><strong>Cargo:</strong> Asesor de Salud Pública</p>
-                    <p>El Dr. Javier Gómez es un experto en salud pública con un enfoque en políticas de salud. Su
-                        experiencia incluye la colaboración con gobiernos y ONGs para mejorar la salud en comunidades
-                        marginadas.</p>
-                </div>
-            </div>
-        </section>
+                <button type="submit" class="submit-button">Enviar Solicitud</button>
+            </form>
+            <p>¿Eres administrador? <a href="./public/templates/admin.html">Revisa las solicitudes de inscripción aquí.</a></p>
+        </div>
+    </section>
 
-        <!-- Sección de impacto -->
-        <section id="impacto">
-            <h2>Impacto</h2>
-            <p>Desde nuestro inicio, hemos llegado a más de 10,000 personas a través de nuestros programas de salud y
-                educación. Nuestro enfoque en la salud preventiva ha demostrado ser eficaz en la reducción de
-                enfermedades en comunidades vulnerables.</p>
-        </section>
+    <!-- Videoconferencias -->
+    <section id="videoconferencias" class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <h2>Videoconferencias</h2>
+            <p class="w3-text-grey">Únete a nuestras videoconferencias y sé parte de la causa. Haz clic en el enlace a
+                continuación para participar.</p>
+            <a href="URL_DE_LA_REUNION" class="w3-button w3-bar">Unirse a la Videoconferencia</a>
+        </div>
+    </section>
 
-        <!-- Sección de noticias -->
-        <section id="noticias">
-            <h2>Noticias</h2>
-            <article>
-                <h3>Nuevo Programa de Salud Preventiva Lanzado</h3>
-                <p>Estamos emocionados de anunciar el lanzamiento de nuestro nuevo programa que se enfoca en la salud
-                    preventiva para adolescentes. Este programa incluye talleres, recursos en línea y más.</p>
-            </article>
-            <article>
-                <h3>Éxito en la Campaña de Vacunación</h3>
-                <p>Gracias a nuestros voluntarios y aliados, hemos logrado vacunar a más de 5,000 personas en la
-                    comunidad durante nuestra última campaña de vacunación.</p>
-            </article>
-        </section>
-
-        <!-- Sección de aprendizaje -->
-        <section id="aprender">
-            <h2>Aprender</h2>
-            <p>Visita nuestra sección de recursos donde encontrarás información sobre salud preventiva, talleres, y
-                materiales educativos.</p>
-            <ul>
-                <li><a href="#">Guía de Salud Preventiva</a></li>
-                <li><a href="#">Talleres y Cursos</a></li>
-                <li><a href="#">Recursos para Voluntarios</a></li>
-            </ul>
-        </section>
-
-        <!-- Sección: Involúcrate -->
-        <section id="involucrate">
-            <h2>Apoya nuestra causa con una donación</h2>
-            <p>Tu donación ayuda a brindar acceso a la atencion médica preventiva para comunidades desatendidas. Agradecemos tu apoyo.</p>
-            <div id="paypal-button-container"></div>
-            
-            <script src="https://sandbox.paypal.com/sdk/js?client-id=AfQT7a7PK4pnOvpONaD7m8_CAFt3R6DzzvNn5XPQl9n6zpmbqAr8-zPSsWqZEGUyVwU2Hf9UNSW9K3C6&components=buttons"></script>
-
-            <script src="./js/Donations/donation.js"></script>
-        </section>
-    </main>
+    <!-- Donaciones -->
+    <section id="donaciones" class="w3-container w3-padding-64 w3-center">
+        <h2>Apoya nuestra causa con una donación</h2>
+        <p>Tu donación ayuda a brindar acceso a la atención médica preventiva para comunidades desatendidas. Agradecemos tu apoyo.</p>
+        <div id="paypal-button-container"></div>
+        <script src="https://sandbox.paypal.com/sdk/js?client-id=AfQT7a7PK4pnOvpONaD7m8_CAFt3R6DzzvNn5XPQl9n6zpmbqAr8-zPSsWqZEGUyVwU2Hf9UNSW9K3C6&components=buttons"></script>
+        <script src="./js/Donations/donation.js"></script>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 CommunityCare. Todos los derechos reservados.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.github.com/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X (Twitter)">
-            </a>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
+        <p>CommunityCare &copy; 2024</p>
     </footer>
-    <script src="./utils/script_dashboard.js"></script>
+
+    <script type="module" src="./js/dashboard/form.js"></script>
 </body>
 
 </html>
