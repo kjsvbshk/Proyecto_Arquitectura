@@ -59,7 +59,8 @@
                 </div>
                 <div class="form-section">
                     <label>Tu Historia:</label>
-                    <textarea required name="story" rows="4" placeholder="Escribe aquí tu historia" id="historia"></textarea>
+                    <textarea required name="story" rows="4" placeholder="Escribe aquí tu historia"
+                        id="historia"></textarea>
                 </div>
                 <div class="form-section">
                     <label>Propuesta de Tema:</label>
@@ -67,7 +68,8 @@
                 </div>
                 <button type="submit" class="submit-button">Enviar Solicitud</button>
             </form>
-            <p>¿Eres administrador? <a href="./public/templates/admin.html">Revisa las solicitudes de inscripción aquí.</a></p>
+            <p>¿Eres administrador? <a href="./public/templates/admin.html">Revisa las solicitudes de inscripción
+                    aquí.</a></p>
         </div>
     </section>
 
@@ -82,21 +84,31 @@
     </section>
 
     <!-- Donaciones -->
-    <section id="donaciones" class="w3-container w3-padding-64 w3-center">
-        <h2>Apoya nuestra causa con una donación</h2>
-        <p>Tu donación ayuda a brindar acceso a la atención médica preventiva para comunidades desatendidas. Agradecemos tu apoyo.</p>
-        <div id="paypal-button-container"></div>
-        <script src="https://sandbox.paypal.com/sdk/js?client-id=AfQT7a7PK4pnOvpONaD7m8_CAFt3R6DzzvNn5XPQl9n6zpmbqAr8-zPSsWqZEGUyVwU2Hf9UNSW9K3C6&components=buttons"></script>
-        <script src="./js/Donations/donation.js"></script>
-    </section>
+<!-- Donaciones -->
+<section id="donaciones" class="w3-container w3-padding-64 w3-center">
+    <h2>Apoya nuestra causa con una donación</h2>
+    <p>Tu donación ayuda a brindar acceso a la atención médica preventiva para comunidades desatendidas. Agradecemos tu apoyo.</p>
+
+    <!-- Tabla para centrar el botón de PayPal -->
+    <table style="margin: 0 auto;">
+        <tr>
+            <td>
+                <div id="paypal-button-container" class="paypal-button-container"></div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Scripts de PayPal -->
+    <script src="https://sandbox.paypal.com/sdk/js?client-id=AfQT7a7PK4pnOvpONaD7m8_CAFt3R6DzzvNn5XPQl9n6zpmbqAr8-zPSsWqZEGUyVwU2Hf9UNSW9K3C6&components=buttons"></script>
+    <script src="./js/Donations/donation.js"></script>
+</section>
+
 
     <!-- Footer -->
     <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">
         <div class="w3-xlarge w3-padding-32">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>

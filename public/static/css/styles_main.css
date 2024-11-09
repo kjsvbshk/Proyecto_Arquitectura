@@ -133,11 +133,12 @@ form .form-section textarea:focus {
 }
 
 /* PayPal Button Container */
-#paypal-button-container {
+.paypal-button-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
 
 /* Footer */
 footer {
@@ -150,4 +151,7 @@ footer {
 
 .w3-bar-item.w3-button.w3-hover-white:hover {
     color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
